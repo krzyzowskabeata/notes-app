@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialModule } from './material/material.module';
 import { SharedModule } from './shared/shared.module';
+import { NotesComponent } from './notes/notes.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,

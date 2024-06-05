@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NotesComponent {
 
+  headerTitle = 'Notes';
+  headerSubtitle = "You can manage your notes here";
+
 }

@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="icon">
+        <ng-content></ng-content>
+    </div>
+    <div class="container header">
+        <p class="title">{{ title }}</p>
+        <ng-content select=[subtitle] class="subtitle"></ng-content>
+    </div>
+</div>

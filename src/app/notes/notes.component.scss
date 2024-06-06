@@ -1,9 +1,19 @@
+
 .notes {
+    margin-top: 4rem;
+    
     .subtitle {
         font-size: .75rem;
-        font-style: italic;
         margin: 0 .75em;
         opacity: .6;
+    }
+
+    app-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
     }
 
     app-search {

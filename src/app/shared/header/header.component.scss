@@ -1,4 +1,13 @@
-.header.container, .container {
+$primary-color: #005cbb; // ToDo: Move to separate file
+$primary-background: #d7e3ff; // ToDo: Move to separate file
+
+.header {
+    color: $primary-color;
+    background: $primary-background;
+    padding: .5rem 1rem;
+}
+
+.container {
     width: 100%;
     display: flex; // ToDo: Create reusable styles
     flex-direction: row;
@@ -9,6 +18,7 @@
         flex-direction: column;
         
         .title {
+            font-weight: bold;
             margin: .6em .6em 0 .6em;
         }
     }

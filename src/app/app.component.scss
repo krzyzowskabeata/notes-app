@@ -1,3 +1,6 @@
+$app-container-padding: 2rem;
+
 .container {
-    width: 100%;
+    width: calc(100% - 2 * $app-container-padding);
+    padding: $app-container-padding;
 }

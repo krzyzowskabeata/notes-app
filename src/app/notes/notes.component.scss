@@ -1,6 +1,12 @@
-.notes .subtitle {
-    font-size: .75rem;
-    font-style: italic;
-    margin: 0 .75em;
-    opacity: .6;
+.notes {
+    .subtitle {
+        font-size: .75rem;
+        font-style: italic;
+        margin: 0 .75em;
+        opacity: .6;
+    }
+
+    app-search {
+        margin: 0 2rem;
+    }
 }

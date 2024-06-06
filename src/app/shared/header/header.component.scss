@@ -1,11 +1,11 @@
-.container {
+.header.container, .container {
     width: 100%;
     display: flex; // ToDo: Create reusable styles
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
 
-    &.header {
+    &.titles {
         flex-direction: column;
         
         .title {

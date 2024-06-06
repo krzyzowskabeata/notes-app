@@ -1,0 +1,9 @@
+<div class="search">
+    <form [formGroup]="form">
+        <mat-form-field appearance="fill">
+            <mat-label>{{ label }}</mat-label>
+            <input formControlName="search" matInput [placeholder]="placeholder" [value]="value">
+            <mat-icon matPrefix>search</mat-icon>
+        </mat-form-field>
+    </form>
+</div>

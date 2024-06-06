@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
 export class NotesComponent {
 
   headerTitle = 'Notes';
-  headerSubtitle = "You can manage your notes here";
+  headerSubtitle = 'You can manage your notes here';
+
+  searchLabel = 'Search';
+
+  searchValueChange(value: string | null): void {
+    // ToDo Add action
+  }
 
 }

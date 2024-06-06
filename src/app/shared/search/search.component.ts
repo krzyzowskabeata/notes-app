@@ -9,21 +9,20 @@ import { FormControl, FormGroup, ValidatorFn } from '@angular/forms';
 export class SearchComponent implements OnInit {
 
   @Input({ required: true }) label!: string;
+
   @Input() placeholder!: string;
-  @Input() value!: string;
   @Input() hint!: string;
-  @Input() validators!: ValidatorFn[];
+
+  @Input() set value(v: string) { this.form.controls.search.setValue(v); }
+  @Input() set validators(vFn: ValidatorFn[]) { this.form.controls.search.setValidators(vFn); }
 
   @Output() searchEvent = new EventEmitter<string | null>();
 
   form = new FormGroup({
-    search: new FormControl(this.value) // ToDo: Add validators, what if value changes in input?
+    search: new FormControl(this.value)
   });
 
   ngOnInit(): void {
-    this.form.controls.search.setValue(this.value);
-    this.form.controls.search.setValidators(this.validators);
-
     this.form.controls.search.valueChanges
       .subscribe(value => this.searchEvent.emit(value));
   }

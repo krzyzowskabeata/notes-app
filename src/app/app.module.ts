@@ -7,11 +7,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { SharedModule } from './shared/shared.module';
 import { NotesComponent } from './notes/notes.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { NotesNotFoundComponent } from './notes/notes-not-found/notes-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotesComponent
+    NotesComponent,
+    NotesNotFoundComponent
   ],
   imports: [
     BrowserModule,

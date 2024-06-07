@@ -9,6 +9,6 @@ export class NotesNotFoundComponent {
 
   title = 'No notes yet';
   instruction = 'Add a note to keep track of your learnings';
-  addBtn = 'Add Note';
+  addBtn = 'Add note';
 
 }

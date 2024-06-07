@@ -8,17 +8,19 @@ import { SharedModule } from './shared/shared.module';
 import { NotesComponent } from './notes/notes.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { NotesNotFoundComponent } from './notes/notes-not-found/notes-not-found.component';
+import { NotesListComponent } from './notes/notes-list/notes-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotesComponent,
-    NotesNotFoundComponent
+    NotesNotFoundComponent,
+    NotesListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [
     provideClientHydration(),

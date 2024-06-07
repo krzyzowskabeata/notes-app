@@ -9,8 +9,6 @@ import { NotesComponent } from './notes/notes.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { NotesNotFoundComponent } from './notes/notes-not-found/notes-not-found.component';
 import { NotesListComponent } from './notes/notes-list/notes-list.component';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { AppData } from './app-data';
 
 @NgModule({
   declarations: [
@@ -23,12 +21,11 @@ import { AppData } from './app-data';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    InMemoryWebApiModule.forRoot(AppData, { delay: 1000 })
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideHttpClient(withFetch()),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

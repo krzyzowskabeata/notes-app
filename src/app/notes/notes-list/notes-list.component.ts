@@ -1,29 +1,21 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { NoteService } from '../note.service';
 
 @Component({
   selector: 'app-notes-list',
   templateUrl: './notes-list.component.html',
-  styleUrl: './notes-list.component.scss'
+  styleUrl: './notes-list.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NotesListComponent implements OnInit, OnDestroy {
+export class NotesListComponent {
 
   private noteServive = inject(NoteService);
+  notes$ = this.noteServive.getNotes();
 
   addBtn = 'Add new';
-  sub!: Subscription; 
-
-  ngOnInit(): void {
-      this.sub = this.noteServive.getNotes().subscribe(n => console.log(n)); // ToDo: Change for async pipe
-  }
 
   addNote(): void {
     // ToDo Add action
-  }
-
-  ngOnDestroy(): void {
-      this.sub?.unsubscribe();
   }
 
 }

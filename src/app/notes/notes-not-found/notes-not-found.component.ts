@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-notes-not-found',
   templateUrl: './notes-not-found.component.html',
-  styleUrl: './notes-not-found.component.scss'
+  styleUrl: './notes-not-found.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NotesNotFoundComponent {
 
